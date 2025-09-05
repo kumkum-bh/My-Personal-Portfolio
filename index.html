@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3ee52b2d15.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Typed.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  </head>
+  <body>
+    <!-- HOME SECTION -->
+    <div id="header">
+      <div class="container">
+        <nav>
+          <ul id="sidemenu">
+            <li><a href="#header" onclick="closemenu()">Home</a></li>
+            <li><a href="#about" onclick="closemenu()">About</a></li>
+            <li><a href="#services" onclick="closemenu()">Services</a></li>
+            <li><a href="#portfolio" onclick="closemenu()">Portfolio</a></li>
+            <li><a href="#contact" onclick="closemenu()">Contact</a></li>
+            <i
+              id="close-icon"
+              class="fa-solid fa-xmark"
+              onclick="closemenu()"
+            ></i>
+          </ul>
+          <i id="menu-icon" class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Hi,</p>
+          <h1>
+            I'm <span class="name-highlight">Kumkum Bhardwaj</span><br />from
+            Ghaziabad<br />
+            <span id="typing-text"></span>
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="Images\bg-img3.png" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Passionate software developer with a focus in building robust web
+              applications. Proficient in languages like JavaScript, HTML/CSS,
+              and React, with a strong foundation in full-stack development. I
+              enjoy continuously learning new technologies to improve my skills.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('certification')">
+                Certification
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Frontend Development</span><br />HTML, CSS, JavaScript,
+                  React – for building interactive and visually engaging user
+                  interfaces.
+                </li>
+                <li>
+                  <span>Backend Development</span><br />Node.js, Express, MySQL,
+                  MongoDB – for handling server-side logic, databases, and API
+                  integrations.
+                </li>
+                <li>
+                  <span>Database Management</span><br />MySQL, MongoDB – for
+                  storing, organizing, and managing data efficiently.
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="certification">
+              <ul>
+                <li>
+                  <span>FullStack Development</span><br /><a
+                    href="Images\certificate-sigma-feb24-development-66746725f8d4f4fecb0502e6.pdf"
+                    >View Certificate</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2019-2021</span><br />Intermediate: Completed with a
+                  focus on core academic subjects.
+                </li>
+                <li>
+                  <span>2021-2025</span><br />B.Tech: Completed with a focus on
+                  engineering and technical skills.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICE SECTION -->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div class="service-item">
+            <i class="fa-solid fa-plane-departure"></i>
+            <h2>Wanderlust</h2>
+            <p>
+              Wanderlust is a full-stack MERN application inspired by Airbnb,
+              enabling users to explore, list, and book unique vacation rentals.
+            </p>
+            <a href="#" class="learn-more" data-id="wanderlust">Learn more</a>
+            <div class="service-details" id="wanderlust">
+                <p><strong>Stack:</strong> MongoDB, Express, React, Node.js</p>
+                <p><strong>Features:</strong> User authentication, listing management, real-time bookings, secure payments.</p>
+                <p><strong>Use Case:</strong> Ideal for users looking for vacation rentals or hosting properties.</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <i class="fa-solid fa-users-between-lines"></i>
+            <h2>ZOOM</h2>
+            <p>
+              Zoom Clone, real-time video conferencing web app built with the
+              MERN stack.
+            </p>
+            <a href="#" class="learn-more" data-id="zoom">Learn more</a>
+            <div class="service-details" id="zoom">
+                <p><strong>Stack:</strong> MongoDB, Express, React, Node.js, WebRTC</p>
+                <p><strong>Features:</strong> Live video, screen sharing, chat, user roles, meeting links.</p>
+                <p><strong>Use Case:</strong> Teams collaborating virtually with secure, scalable video calls.</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <i class="fa-solid fa-desktop"></i>
+            <h2>Portfolio</h2>
+            <p>
+              A responsive personal portfolio built using HTML, CSS, and JavaScript.
+            </p>
+            <a href="#" class="learn-more" data-id="portfolio-service">Learn more</a>
+            <div class="service-details" id="portfolio-service">
+                <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+                <p><strong>Features:</strong> Responsive design, contact form integration, dynamic tabs, certificate links.</p>
+                <p><strong>Use Case:</strong> Showcasing skills, projects, and credentials to potential employers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PORTFOLIO SECTION -->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="Images\work1-img1.png" />
+            <div class="layer">
+              <h3>Wanderlust</h3>
+              <p>
+                A MERN-based Airbnb clone for browsing and booking rental
+                properties with user authentication and dynamic listings.
+              </p>
+              <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+              <a
+                href="#"
+                class="project-detail"
+                data-title="Wanderlust"
+                data-description="Wanderlust is a full-stack MERN application inspired by Airbnb. It includes user authentication, dynamic listings, and a booking system."
+                data-link="#"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="work">
+            <img src="Images\work2-img3.png" />
+            <div class="layer">
+              <h3>ZOOM</h3>
+              <p>
+                A MERN-based Zoom clone enabling real-time video calls with
+                screen sharing, chat functionality, and secure user
+                authentication, designed for smooth virtual collaboration.
+              </p>
+              <!-- <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a> -->
+              <a
+                href="#"
+                class="project-detail"
+                data-title="ZOOM"
+                data-description="A Zoom clone built with the MERN stack for real-time video conferencing.
+                Features include chat, screen sharing, and secure user authentication."
+                data-link="#"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="work">
+            <img src="Images\work3-img1.png" />
+            <div class="layer">
+              <h3>Portfolio</h3>
+              <p>
+                A front-end portfolio website designed with HTML, CSS, and
+                JavaScript, featuring project previews, skill highlights, and
+                certificate links with responsive design.
+              </p>
+              <!-- <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a> -->
+              <a
+                href="#"
+                class="project-detail"
+                data-title="Portfolio"
+                data-description="A responsive personal portfolio website built using HTML, CSS, and JavaScript.
+                Showcases projects, skills, and certifications in a clean, interactive layout."
+                data-link="#"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              kkbhardwajsharma1234@gmail.com
+            </p>
+            <p><i class="fa-solid fa-phone"></i> +91 8448610673</p>
+            <div class="social-icons">
+              <a href="https://linkedIn.com/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://telegram.com/"
+                ><i class="fa-brands fa-telegram"></i
+              ></a>
+              <a href="https://facebook.com/"
+                ><i class="fa-brands fa-square-facebook"></i
+              ></a>
+              <a href="https://instagram.com/"
+                ><i class="fa-brands fa-square-instagram"></i
+              ></a>
+            </div>
+            <a href="Images\Kumkum Bhardwaj (2).pdf" download class="btn"
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="text"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright &copy; Portfolio. Made with ❤️ by Kumkum Bhardwaj</p>
+      </div>
+    </div>
+
+    <!-- Header Links -->
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-tab");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+
+    <!-- Small Screen Media queries -->
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+      var menuIcon = document.getElementById("menu-icon");
+      var closeIcon = document.getElementById("close-icon");
+
+      function openmenu() {
+        if (window.innerWidth <= 768) {
+          sidemenu.style.right = "0";
+          menuIcon.style.display = "none";
+          closeIcon.style.display = "block";
+        }
+      }
+
+      function closemenu() {
+        if (window.innerWidth <= 768) {
+          sidemenu.style.right = "-200px";
+          menuIcon.style.display = "block";
+          closeIcon.style.display = "none";
+        }
+      }
+
+      // Ensure correct icon visibility on window resize
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 768) {
+          sidemenu.style.right = "0";
+          menuIcon.style.display = "none";
+          closeIcon.style.display = "none";
+        } else {
+          sidemenu.style.right = "-200px";
+          menuIcon.style.display = "block";
+          closeIcon.style.display = "none";
+        }
+      });
+
+      // Set initial state based on screen size
+      window.addEventListener("DOMContentLoaded", function () {
+        if (window.innerWidth > 768) {
+          menuIcon.style.display = "none";
+          closeIcon.style.display = "none";
+          sidemenu.style.right = "0";
+        } else {
+          menuIcon.style.display = "block";
+          closeIcon.style.display = "none";
+          sidemenu.style.right = "-200px";
+        }
+      });
+    </script>
+
+    <!-- Google Sheet Contact Form -->
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxDKTWTLqEoHf4s7SDRqxftKV-omLXkFucTCBJNf5KvYga0AAXk982TOsdS7t3MSMWUhw/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent successfully!";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 2000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+
+    <script>
+      // Typing animation using Typed.js
+      var typed = new Typed("#typing-text", {
+        strings: [
+          "Frontend Developer",
+          "Backend Developer",
+          "Fullstack Developer",
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,
+        backDelay: 1500,
+        loop: true,
+      });
+    </script>
+
+    <!-- Modal Structure -->
+    <div id="project-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+        <a id="modal-link" href="#" target="_blank">Visit Project</a>
+      </div>
+    </div>
+
+
+
+
+    <script>
+        const modal = document.getElementById("project-modal");
+        const modalTitle = document.getElementById("modal-title");
+        const modalDesc = document.getElementById("modal-description");
+        const modalLink = document.getElementById("modal-link");
+        const closeBtn = document.querySelector(".close-btn");
+
+        document.querySelectorAll('.project-detail').forEach(arrow => {
+            arrow.addEventListener('click', function(e) {
+                e.preventDefault();
+                modalTitle.textContent = this.getAttribute('data-title');
+                modalDesc.textContent = this.getAttribute('data-description');
+                modalLink.href = this.getAttribute('data-link');
+                modal.style.display = 'block';
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+
+
+
+    <script>
+        const learnMoreLinks = document.querySelectorAll('.learn-more');
+
+        learnMoreLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('data-id');
+                const serviceItem = this.closest('.service-item');
+
+                // Toggle current item
+                serviceItem.classList.toggle('open');
+
+                // Close others
+                document.querySelectorAll('.service-item').forEach(item => {
+                    if (item !== serviceItem) {
+                        item.classList.remove('open');
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
+
+</body>
+</html>
